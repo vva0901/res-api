@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .msg-container
+    div.message-box
+      h3=message
+    div.button-group
+      a(href='/', role='button' style="margin: 15px; padding: 5px;") Go to home page
+      if (addMoreBtn)
+        a(href='/add', role='button' style="margin: 15px; padding: 5px;") Add more item

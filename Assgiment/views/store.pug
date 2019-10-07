@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    .container
+      a.navbar-brand(href='/store') X Store
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/')
+              | Admin
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/store') Store
+  .container.layout
+    .my-4
+      img.img-banner(src='https://converse.com.vn/pictures/catalog/products/about.jpg' alt="logo")
+    .row.text-center
+      each item in listProduct
+        .col-lg-3.col-md-6.mb-4
+          .card.h-100
+            img.card-img-top(src=item.image alt='img-itmes')
+            .card-body
+              h4.card-title= item.name
+              p.card-text.color= item.color
+              p#price.card-text= `${item.pirce} VNĐ`
+              script.
+                console.log(document.getElementById('price'))

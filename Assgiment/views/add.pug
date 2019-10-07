@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+    .container
+      a.navbar-brand(href='/store') X Store
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/')
+              | Admin
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/store') Store
+  .form-add
+    form(action='/add' method='POST' enctype='multipart/form-data')
+      div.title Add new product
+      .form-group
+        label(for='exampleFormControlInput1') Name
+        input#name.form-control(type='text' placeholder='Name' name='name' value='')
+        .form-group
+        label(for='exampleFormControlSelect1') Color
+        - const listColor = ['White/ Converse Black/White', 'Converse Black/Mason/White', 'White/Black/White', 'Coastal Pink/Light Redwood','Optical White']
+        select#color.form-control(name='color' )
+          each item in listColor
+            option(value= item)= item
+        .form-group
+        label(for='exampleFormControlSelect1') Size
+        - const listSize = ['3.5US - 6.5US Men (5.5US-8.5US Women)','4.5US-5.5US, 7.5US-8.5US','3.5US - 9US Men (5.5US-11.US Women)','3.5US - 6.5US','3US - 10US']
+        select#size.form-control(name='size')
+          each item in listSize
+            option(value= item)= item
+        .form-group
+        label(for='exampleFormControlSelect1') Gender
+        - const listGender = ['Women','Men','Womenn & Men']
+        select#gender.form-control(name='gender')
+          each item in listGender
+            option(value= item)= item
+        .form-group
+        label(for='exampleFormControlSelect1') Material
+        - const listMaterial = ['Canvas','Leather','Poly Denim']
+        select#material.form-control(name='material')
+          each item in listMaterial
+            option(value= item)= item
+        .form-group
+        label(for='exampleFormControlInput1') Price
+        input#pirce.form-control(type='number' placeholder='Price' name="pirce" value='')
+        .form-group
+        label(for='exampleFormControlInput1') Images
+        input#image.form-control(type='file' name="image" value='' placeholder="chose file")
+        a.btn.btn-danger.btn-subumit.ml-2(href='/') Cancel
+        button.btn.btn-primary.btn-subumit(type='submit') Save
+        //- script.
+        //-     function change (id,value) {
+        //-         if(id === 'image') {
+        //-             document.getElementById(id).value = document.getElementById(id).files[0]
+        //-         } else {
+        //-             document.getElementById(id).value = value
+        //-         }
+        //-     }
