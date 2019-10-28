@@ -1,0 +1,95 @@
+body {
+  padding-top: 0px;
+}
+/* .jumbotron {
+  background-image: url("https://www.converse.com.vn/pictures/catalog/banner/men/womensneakers.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+.img-banner {
+  height: 100%;
+  width: 100%;
+}
+.wellcome {
+  /* text-align: center; */
+  color: #fff;
+}
+.color {
+  color: #5c5c5c;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main {
+  margin-top: 70px;
+  font-size: 14px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+.form-add {
+  display: flex;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.btn-subumit {
+  margin-top: 10px;
+  float: right;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-footer button:hover {
+  opacity: 0.8;
+}
+
+/* message box  */
+.msg-container {
+  text-align: center;
+}
+
+.msg-container .button-group a {
+  text-decoration: none;
+  color: #908d8b;
+}
+
+.msg-container .button-group a:hover {
+  color: #111;
+}
+
+.img-product {
+  height: 50px;
+  display: block;
+}
+.layout {
+  padding-top: 50px;
+}
+.table-wapper {
+  margin: 20px;
+}
+.momney {
+  text-align: right;
+}
